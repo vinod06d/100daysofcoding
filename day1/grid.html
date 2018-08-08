@@ -1,0 +1,62 @@
+<p>Grid with equal width</p>
+
+<div class="grid grid-4col">
+	<div class="grid-item">
+	</div>
+	<div class="grid-item"></div>
+	<div class="grid-item"></div>
+	<div class="grid-item"></div>
+	
+</div>
+<br>
+<p>Grid with responsive n equal width</p>
+
+<div class="grid grid-responsive">
+	<div class="grid-item">
+	</div>
+	<div class="grid-item"></div>
+	<div class="grid-item"></div>
+	<div class="grid-item"></div>
+	
+</div>
+<br>
+<p>Grid with equal width with image</p>
+<div class="grid grid-img">
+	<div class="grid-item">
+		<img src="https://lorempixel.com/output/nature-q-c-1000-500-5.jpg" alt="">
+	</div>
+	<div class="grid-item"></div>
+	<div class="grid-item"></div>
+	<div class="grid-item"></div>
+	
+</div>
+<br>
+
+
+<style type="text/css">
+	body{
+		padding: 3em;
+	}
+	.grid{
+		display: grid;
+		grid-column-gap: 20px;
+	}
+	.grid-img{
+		grid-template-columns: repeat(4, minmax(0, 1fr));
+	}
+	.grid-4col{
+		grid-template-columns: 100px 100px 100px 100px;
+	}
+	.grid-responsive{
+		grid-template-columns: repeat(4, 1fr);
+	}
+	.grid-item{
+		background-color: orange;
+		height: 10px;
+	}
+	img{
+		/*width: 300px;*/
+		max-width: 100%;
+		display: block;
+	}
+</style>
